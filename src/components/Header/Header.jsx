@@ -1,5 +1,6 @@
 import React from 'react';
-import '../style/Header.css';
+import '../Header/Header.css';
+import Menu from '../Menu/Menu.jsx';
 
 const Header = () => {
   return (
@@ -15,7 +16,9 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+        <Menu/>
     </header>
+    
   );
 }
 

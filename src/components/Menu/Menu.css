@@ -1,0 +1,38 @@
+.wrapper {
+    background-color: #143C8A; 
+    flex-grow: 1; 
+}
+.container-menu {
+    background-color: #143C8A;
+    max-width: 75em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    color: #fff;
+    padding: 0.1em 0.1em;
+    font-family: "Arial", sans-serif;
+    text-transform: capitalize;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 1.25em;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .menu a:hover {
+    text-decoration: underline;
+  }
+  
