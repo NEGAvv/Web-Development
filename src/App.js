@@ -1,4 +1,6 @@
-import logo from './logo.svg';
+
+import './noStyle.css'
+import React, { useState } from 'react';
 import './App.css';
 import Footer from './components/Footer/Footer.jsx';
 import Body from './components/Body/Body.jsx';
@@ -18,6 +20,9 @@ const products = [
 ];
 
 function App() {
+
+
+
   return (
     <div className="App">
       <Header /> 

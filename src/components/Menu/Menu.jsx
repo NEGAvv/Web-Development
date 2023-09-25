@@ -6,7 +6,7 @@ const Menu = () => {
     <div className="wrapper">
         <div className="container-menu">
             <nav className="menu">
-                <ul>
+                <ul className="menu-list">
                     <li><a href="/">Спальня</a></li>
                     <li><a href="/">Ванна</a></li>
                     <li><a href="/">Офіс</a></li>
@@ -21,7 +21,6 @@ const Menu = () => {
             </nav>
         </div>
     </div>
-
   );
 }
 

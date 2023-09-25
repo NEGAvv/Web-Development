@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Product/Product.css';
 
-function Product({ product }) {
+function Product({ product,setProducts }) {
   const [isSelected, setIsSelected] = useState(false);
 
   const handleClick = () => {

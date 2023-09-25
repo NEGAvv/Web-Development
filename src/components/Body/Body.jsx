@@ -9,7 +9,8 @@ const Body = ({ products }) => {
         <h2>Список товарів</h2>
           <div className="product-list">
             {products.map(product => (
-              <Product key={product.id} product={product} />
+              <Product key={product.id} 
+              product={product}  />
             ))}
           </div>
       </div>
