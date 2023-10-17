@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import '../Product/Product.css';
 
-function Product({ product,setProducts }) {
-  const [isSelected, setIsSelected] = useState(false);
+function Product({ product, selectProduct }) {
 
   const handleClick = () => {
-    setIsSelected(!isSelected);
+    selectProduct(product); 
   };
 
-  const productClass = isSelected ? 'product selected' : 'product';
-
   return (
-    <div className={productClass} onClick={handleClick}>
+    <div className="product" onClick={handleClick}>
       <img src={product.imageUrl} alt={product.name} />
-      <p >{product.name}</p>
+      <p>{product.name}</p>
       <h3>Ціна: {product.price} грн</h3>
     </div>
   );

@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import '../Header/Header.css';
 import Menu from '../Menu/Menu.jsx';
+import JyskLogo from '../../Jysk_logo.svg'
 
-const Header = ({selectedItemsCount}) => {
+const Header = ({returnToMain}) => {
   return (
     <header className="header">
       <div className="container">
-        <h1 className="header-title">JYSK</h1>
+        <a className="header-title" href="#" onClick={returnToMain} >
+        <img
+              src={JyskLogo}
+              alt="JYSK"
+            />
+        </a>
         <nav className="header-nav">
           <ul>
             <li><a href="#">питання-відповідь</a></li>

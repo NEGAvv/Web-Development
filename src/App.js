@@ -1,11 +1,10 @@
-
 import './noStyle.css'
 import React, { useState } from 'react';
 import './App.css';
 import Footer from './components/Footer/Footer.jsx';
 import Body from './components/Body/Body.jsx';
 import Header from './components/Header/Header.jsx';
-
+import ProductDetails from './components/ProductDetails/ProductDetails.jsx'
 
 
 const products = [
@@ -19,15 +18,29 @@ const products = [
   { id: 8, name: 'Стілець обідній JEGIND натура/білий', price: 2000, imageUrl:'./images/chair8.jpg', checked: false },
 ];
 
+
+
 function App() {
 
+const [selectedProduct, setSelectedProduct] = useState(false);
 
+  const selectProduct = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const returnToMain = () => {
+    setSelectedProduct(null);
+  };
 
   return (
     <div className="App">
-      <Header /> 
+      <Header returnToMain={returnToMain} /> 
       <div className="content">
-        <Body products={products} /> 
+      {selectedProduct ? (
+          <ProductDetails product={selectedProduct} />
+        ) : (
+          <Body products={products} selectProduct={selectProduct} />
+        )}
       </div>
       <Footer /> 
 

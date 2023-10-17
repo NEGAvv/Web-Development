@@ -4,7 +4,7 @@ import '../Footer/Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="footer-container">
         <div className="footer-columns">
           {/* Перша колонка */}
           <div className="footer-column">
