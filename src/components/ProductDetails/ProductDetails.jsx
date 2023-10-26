@@ -3,23 +3,22 @@ import useReviews from '../../hooks/useReviews'
 import '../ProductDetails/ProductDetails.css';
 
 function ProductDetails({ product }) {
-  const [comment, setComment] = useReviews(); // Оголошуємо стан коментаря
-
+  const [comment, setComment] = useReviews(null,"lastComment"); 
+  const [comments, setComments] = useState([]);
 
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
+    // console.log(e.target.value)
   };
 
   const handleAddComment = () => {
     if (comment.trim() !== '') {
-      // Додаємо коментар до хука useReviews
-      addComment(product.id, comment);
-      setComment(''); // Очищаємо поле коментаря
+      setComments([...comments, comment]);
+      console.log(comment)
     }
   };
 
-  const productReviews = getReviewsByProduct(product.id);
 
   return (
     <div className="product-details">
@@ -32,7 +31,6 @@ function ProductDetails({ product }) {
         <h3>Додати коментар</h3>
         <input
           type="text"
-          value={comment}
           onChange={handleCommentChange}
           placeholder="Ваш коментар"
         />
@@ -40,8 +38,8 @@ function ProductDetails({ product }) {
         <div className="comments">
           <h3>Коментарі:</h3>
           <ul>
-            {productReviews.map((review, index) => (
-              <li key={index}>{review.comment}</li>
+            {comments.map((comment, index) => (
+              <li key={index}>{comment}</li>
             ))}
           </ul>
         </div>

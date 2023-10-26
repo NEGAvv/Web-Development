@@ -1,6 +1,7 @@
 import './noStyle.css'
 import React, { useState } from 'react';
 import './App.css';
+import useConsoledState from './hooks/useConsoledState'
 import Footer from './components/Footer/Footer.jsx';
 import Body from './components/Body/Body.jsx';
 import Header from './components/Header/Header.jsx';
@@ -22,7 +23,7 @@ const products = [
 
 function App() {
 
-const [selectedProduct, setSelectedProduct] = useState(false);
+const [selectedProduct, setSelectedProduct] = useConsoledState(false);
 
   const selectProduct = (product) => {
     setSelectedProduct(product);
