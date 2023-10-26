@@ -1,19 +1,25 @@
-import React, { useState } from 'react';
-import '../ProductDetails/ProductDetails.css'
+import React, {useState} from 'react';
+import useReviews from '../../hooks/useReviews'
+import '../ProductDetails/ProductDetails.css';
+
 function ProductDetails({ product }) {
-  const [comment, setComment] = useState('');
-  const [comments, setComments] = useState([]);
+  const [comment, setComment] = useReviews(); // Оголошуємо стан коментаря
+
+
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
   };
 
-  const addComment = () => {
+  const handleAddComment = () => {
     if (comment.trim() !== '') {
-      setComments([...comments, comment]);
-      setComment('');
+      // Додаємо коментар до хука useReviews
+      addComment(product.id, comment);
+      setComment(''); // Очищаємо поле коментаря
     }
   };
+
+  const productReviews = getReviewsByProduct(product.id);
 
   return (
     <div className="product-details">
@@ -30,12 +36,12 @@ function ProductDetails({ product }) {
           onChange={handleCommentChange}
           placeholder="Ваш коментар"
         />
-        <button onClick={addComment}>Додати</button>
+        <button onClick={handleAddComment}>Додати</button>
         <div className="comments">
           <h3>Коментарі:</h3>
           <ul>
-            {comments.map((comment, index) => (
-              <li key={index}>{comment}</li>
+            {productReviews.map((review, index) => (
+              <li key={index}>{review.comment}</li>
             ))}
           </ul>
         </div>
