@@ -1,14 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 function useConsoledState(initialValue) {
-    const [value, setValue] = useState(initialValue);
+  const [value, setValue] = useState(initialValue);
 
+  useEffect(() => {
+    console.log(value);
+  }, [value]);
 
-    useEffect(()=>{
-        console.log(value);
-    }, [value])
-
-    return [value, setValue];
+  return [value, setValue];
 }
 
 export default useConsoledState;

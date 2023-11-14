@@ -1,32 +1,41 @@
-import React, { useState } from 'react';
-import '../Header/Header.css';
-import Menu from '../Menu/Menu.jsx';
-import JyskLogo from '../../Jysk_logo.svg'
+import React, { useContext, useState } from "react";
+import "../Header/Header.css";
+import Menu from "../Menu/Menu.jsx";
+import JyskLogo from "../../Jysk_logo.svg";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../HOC/Providers/AuthProvider";
 
-const Header = ({returnToMain}) => {
+const Header = () => {
+  const auth = useContext(AuthContext);
   return (
     <header className="header">
       <div className="container">
-        <a className="header-title" href="#" onClick={returnToMain} >
-        <img
-              src={JyskLogo}
-              alt="JYSK"
-            />
-        </a>
+        <Link className="header-title" to="/">
+          <img src={JyskLogo} alt="JYSK" />
+        </Link>
         <nav className="header-nav">
           <ul>
-            <li><a href="#">питання-відповідь</a></li>
-            <li><a href="#">акційні газети</a></li>
-            <li><a href="#">магазини</a></li>
-            <li><a href="#">вхід</a></li>
+            <li>
+              <Link to="/">питання-відповідь</Link>
+            </li>
+            <li>
+              <Link to="/">акційні газети</Link>
+            </li>
+            <li>
+              <Link to="/">магазини</Link>
+            </li>
+            <li>
+              <Link to="/" onClick={auth.toggleAuth}>
+                {auth.auth ? "Logout" : "Login"}
+              </Link>
+            </li>
           </ul>
         </nav>
-        <div className='market-cart'>.</div>
+        <div className="market-cart"></div>
       </div>
-        <Menu/>
+      <Menu />
     </header>
-    
   );
-}
+};
 
 export default Header;

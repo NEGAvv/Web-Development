@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
-import useReviews from '../../hooks/useReviews'
-import '../ProductDetails/ProductDetails.css';
+import React, { useContext, useState } from "react";
+import useReviews from "../../hooks/useReviews";
+import "../ProductDetails/ProductDetails.css";
+import { useParams } from "react-router-dom";
+import { ProductContext } from "../../HOC/Providers/ProductProvider";
 
-function ProductDetails({ product }) {
-  const [comment, setComment] = useReviews(null,"lastComment"); 
+function ProductDetails() {
+  const [comment, setComment] = useReviews(null, "lastComment");
   const [comments, setComments] = useState([]);
-
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
@@ -13,19 +14,24 @@ function ProductDetails({ product }) {
   };
 
   const handleAddComment = () => {
-    if (comment.trim() !== '') {
+    if (comment.trim() !== "") {
       setComments([...comments, comment]);
-      console.log(comment)
+      console.log(comment);
     }
   };
 
+  const { id } = useParams();
+  const value = useContext(ProductContext);
+  const currentProduct = value.products.filter(
+    (productValue) => productValue.id == id
+  )[0];
 
   return (
     <div className="product-details">
       <div className="product-info">
-        <h2>{product.name}</h2>
-        <img src={product.imageUrl} alt={product.name} />
-        <h3>Ціна: {product.price} грн</h3>
+        <h2>{currentProduct.name}</h2>
+        <img src={currentProduct.imageUrl} alt={currentProduct.name} />
+        <h3>Ціна: {currentProduct.price} грн</h3>
       </div>
       <div className="comment-section">
         <h3>Додати коментар</h3>

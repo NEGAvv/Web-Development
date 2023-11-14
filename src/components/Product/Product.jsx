@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
-import '../Product/Product.css';
+import React, { useState } from "react";
+import "../Product/Product.css";
 
-function Product({ product, selectProduct }) {
-
-  const handleClick = () => {
-    selectProduct(product); 
-  };
-
+function Product({ product }) {
   return (
-    <div className="product" onClick={handleClick}>
+    <div className="product">
       <img src={product.imageUrl} alt={product.name} />
       <p>{product.name}</p>
       <h3>Ціна: {product.price} грн</h3>
