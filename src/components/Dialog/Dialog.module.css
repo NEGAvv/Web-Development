@@ -1,0 +1,74 @@
+
+  .dialog_enter {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  
+  .dialog_enter_active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .dialog_exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .dialog_exit_active {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .overlay_enter {
+    opacity: 0;
+  }
+  
+  .overlay_enter_active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+  
+  .overlay_exit {
+    opacity: 1;
+  }
+  
+  .overlay_exit_active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+  }
+  
+  .dialog {
+    background: white;
+    padding: 30px 25px 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1001;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: -1px;
+    right: 25px;
+    cursor: pointer;
+    font-size: 24px;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+  }

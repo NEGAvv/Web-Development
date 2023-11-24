@@ -1,5 +1,5 @@
-@media (max-width: 768px) {
-  .container-menu {
+@media (max-width: 900px) {
+  .container_menu {
     flex-direction: column;
     background-color: #143C8A;
     width: 100%;
@@ -14,13 +14,13 @@
   .menu {
     margin: 5px 0; 
   }
-  .menu-list {
+  .menu ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
   }
-  .menu-list li {
+  .menu li {
     flex: 0 0 calc(39% - 10px); 
     text-align: center;
     margin: 10px 0; 
@@ -32,9 +32,9 @@
   background-color: #143C8A;
   flex-grow: 1;
 }
-.container-menu {
+.container_menu {
   background-color: #143C8A;
-  width: 100%;
+  width: 88%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -45,14 +45,19 @@
   text-transform: capitalize;
 }
 
+.menu {
+  margin: 5px ; 
+}
+
 .menu ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
 }
 
 .menu li {
-  margin-right: 10px; 
+  margin-left: 20px; 
 }
 
 .menu a {
@@ -65,12 +70,6 @@
   text-decoration: underline;
 }
 
-.menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
-.menu-list li {
-  margin-left: 40px; 
-}
+
+

@@ -7,7 +7,7 @@
   }
 }
 
-.header {
+.main_header {
   background-color: #fff;
   color: #000;
   padding: 0;
@@ -16,8 +16,8 @@
 }
 
 
-.container {
-  width: 100%;
+.header_container {
+  width: 90%;
   margin: 0 auto;
   padding: 0 8px; 
   display: flex;
@@ -25,11 +25,11 @@
   align-items: center;
   flex-direction: row;
 }
-.header-nav{
+.header_nav{
   width: 65%;
   
 }
-.header-title {
+.header_title {
   margin: 20px;
   margin-left: 35px; 
   text-align: start;
@@ -39,11 +39,11 @@
   font-size: 36px;
 }
 
-.header-title img {
+.header_title img {
   width: 100%; 
 }
 
-.market-cart{
+.market_cart{
   width: 10%;
 }
 
@@ -55,18 +55,18 @@ h1 {
   text-underline-position: under;
 }
 
-nav ul {
+.header_nav ul {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: end;
 }
 
-nav li {
+.header_nav li {
   margin-left: 20px; 
 }
 
-nav a {
+.header_nav a {
   color: #000;
   text-decoration: none;
   font-size: 18px; 

@@ -1,19 +1,28 @@
 import React, { useContext, useState } from "react";
-import "../Header/Header.css";
+import styles from "../Header/Header.module.css";
 import Menu from "../Menu/Menu.jsx";
 import JyskLogo from "../../Jysk_logo.svg";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../HOC/Providers/AuthProvider";
+import { Button } from "antd";
+import LoginModal from "../LoginModal/LoginModal";
+import { LoginOutlined, LogoutOutlined } from "@ant-design/icons";
 
 const Header = () => {
   const auth = useContext(AuthContext);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
-    <header className="header">
-      <div className="container">
-        <Link className="header-title" to="/">
+    <header className={styles.main_header}>
+      <div className={styles.header_container}>
+        <Link className={styles.header_title} to="/">
           <img src={JyskLogo} alt="JYSK" />
         </Link>
-        <nav className="header-nav">
+        <nav className={styles.header_nav}>
           <ul>
             <li>
               <Link to="/">питання-відповідь</Link>
@@ -25,15 +34,23 @@ const Header = () => {
               <Link to="/">магазини</Link>
             </li>
             <li>
-              <Link to="/" onClick={auth.toggleAuth}>
-                {auth.auth ? "Logout" : "Login"}
-              </Link>
+              {auth.auth ? (
+                <Button onClick={auth.toggleAuth}>
+                  <LogoutOutlined /> Вихід
+                </Button>
+              ) : (
+                <Button onClick={toggleModal}>
+                  <LoginOutlined /> Вхід
+                </Button>
+              )}
             </li>
           </ul>
         </nav>
-        <div className="market-cart"></div>
+        {/* <div className={styles.market_cart}></div> */}
       </div>
       <Menu />
+
+      <LoginModal isOpen={isModalOpen} onClose={toggleModal} />
     </header>
   );
 };

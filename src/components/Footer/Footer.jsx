@@ -1,13 +1,13 @@
-import React from 'react';
-import '../Footer/Footer.css';
+import React from "react";
+import styles from "../Footer/Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-columns">
+    <footer className={styles.footer_main}>
+      <div className={styles.footer_container}>
+        <div className={styles.footer_columns}>
           {/* Перша колонка */}
-          <div className="footer-column">
+          <div className={styles.footer_column}>
             <h3>Категорії товарів</h3>
             <ul>
               <li>Спальня</li>
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
 
           {/* Друга колонка */}
-          <div className="footer-column">
+          <div className={styles.footer_column}>
             <h3>Інформація</h3>
             <ul>
               <li>Відділ по роботі з клієнтами</li>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
 
           {/* Третя колонка */}
-          <div className="footer-column">
+          <div className={styles.footer_column}>
             <h3>JYSK</h3>
             <ul>
               <li>JYSK.com</li>
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
 
           {/* Четверта колонка */}
-          <div className="footer-column">
+          <div className={styles.footer_column}>
             <h3>ЦЕНТРАЛЬНИЙ ОФІС</h3>
             <p>ТОВ "ЮСК УКРАЇНА"</p>
             <p>м. Київ</p>
@@ -67,12 +67,12 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="footer-bottom">
+        <div className={styles.footer_bottom}>
           <p>&copy; {new Date().getFullYear()} JYSK</p>
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

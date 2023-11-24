@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "../Product/Product.css";
+import styles from "../Product/Product.module.css";
 
 function Product({ product }) {
   return (
-    <div className="product">
+    <div className={styles.product}>
       <img src={product.imageUrl} alt={product.name} />
       <p>{product.name}</p>
       <h3>Ціна: {product.price} грн</h3>
