@@ -20,7 +20,10 @@ const CategoryPage = () => {
     <div className={styles.categoryContainer}>
       <CategoryList categoryData={categoryData} />
       <div className={styles.mainContent}>
-        <h2>{categoryData.categoryName}</h2>
+        <p className={styles.categoryTitle}>{categoryData.categoryTitle}</p>
+        <p className={styles.categoryDescription}>
+          {categoryData.categoryDescription}
+        </p>
         {Object.keys(categoryData).map((subCategory) => (
           <CategoryItem
             key={subCategory}

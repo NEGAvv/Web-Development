@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import styles from "../../pages/CategoryPage/CategoryPage.module.css";
 
 const CategoryItem = ({ subCategory, categoryData }) => {
-  if (subCategory === "categoryName" || subCategory === "imageUrl") {
+  if (
+    subCategory === "categoryName" ||
+    subCategory === "imageUrl" ||
+    subCategory === "categoryTitle" ||
+    subCategory === "categoryDescription"
+  ) {
     return null;
   }
 
