@@ -17,7 +17,7 @@
 
 
 .header_container {
-  width: 90%;
+  width: 81%;
   margin: 0 auto;
   padding: 0 8px; 
   display: flex;
@@ -60,6 +60,7 @@ h1 {
   padding: 0;
   display: flex;
   justify-content: end;
+  margin-right: 35px;
 }
 
 .header_nav li {

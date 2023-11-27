@@ -9,6 +9,7 @@ import ProductDetails from "./components/ProductDetails/ProductDetails.jsx";
 import ProductProvider, {
   ProductContext,
 } from "./HOC/Providers/ProductProvider";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   const value = useContext(ProductContext);
@@ -16,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <div className="content">
-        <Body />
+        <HomePage />
+        {/* <Body /> */}
       </div>
     </div>
   );

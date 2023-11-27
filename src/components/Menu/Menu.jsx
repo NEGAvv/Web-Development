@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../Menu/Menu.module.css";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -8,34 +9,31 @@ const Menu = () => {
         <nav className={styles.menu}>
           <ul>
             <li>
-              <a href="/">Спальня</a>
+              <Link to="/category/bedroom">Спальня</Link>
             </li>
             <li>
-              <a href="/">Ванна</a>
+              <Link to="/category/bathroom">Ванна</Link>
             </li>
             <li>
-              <a href="/">Офіс</a>
+              <Link to="/category/office">Офіс</Link>
             </li>
             <li>
-              <a href="/">Вітальня</a>
+              <Link to="/category/livingroom">Вітальня</Link>
             </li>
             <li>
-              <a href="/">Кухня та їдальня</a>
+              <Link to="/category/diningRoom">Кухня та їдальня</Link>
             </li>
             <li>
-              <a href="/">Зберігання</a>
+              <Link to="/category/storage">Зберігання</Link>
             </li>
             <li>
-              <a href="/">Для вікон</a>
+              <Link to="/category/windows">Для вікон</Link>
             </li>
             <li>
-              <a href="/">Для саду</a>
+              <Link to="/category/garden">Для саду</Link>
             </li>
             <li>
-              <a href="/">Для дому</a>
-            </li>
-            <li>
-              <a href="/">Outlet</a>
+              <Link to="/category/forHome">Для дому</Link>
             </li>
           </ul>
         </nav>
