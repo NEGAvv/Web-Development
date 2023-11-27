@@ -89,7 +89,7 @@ const shelves = [
   {
     id: 1,
     name: "Стелаж VANDBORG 3пол дуб/чорний",
-    subCategoryName: "Книжкові шафи, стелажі",
+    subCategoryName: "Книжкові шафи",
     price: 1750,
     imageUrl: require("../../assets/office/shelves/shelves1.jpg"),
     checked: false,
@@ -97,7 +97,7 @@ const shelves = [
   {
     id: 2,
     name: "Стелаж TRAPPEDAL 5пол дуб/білий",
-    subCategoryName: "Книжкові шафи, стелажі",
+    subCategoryName: "Книжкові шафи",
     price: 2350,
     imageUrl: require("../../assets/office/shelves/shelves2.jpg"),
     checked: false,
@@ -105,7 +105,7 @@ const shelves = [
   {
     id: 3,
     name: "Шафка SKALS 2дв дуб",
-    subCategoryName: "Книжкові шафи, стелажі",
+    subCategoryName: "Книжкові шафи",
     price: 3000,
     imageUrl: require("../../assets/office/shelves/shelves3.jpg"),
     checked: false,
@@ -113,7 +113,7 @@ const shelves = [
   {
     id: 4,
     name: "Шафка SKALS 2дв білий",
-    subCategoryName: "Книжкові шафи, стелажі",
+    subCategoryName: "Книжкові шафи",
     price: 2750,
     imageUrl: require("../../assets/office/shelves/shelves4.jpg"),
     checked: false,
@@ -512,7 +512,7 @@ const productState = {
       {
         id: 1,
         name: "Стіл письмовий VANDBORG 60х120 дуб/чорн.",
-        subCategoryName: "Комп'ютерні та письмові столи",
+        subCategoryName: "Письмові столи",
         price: 1500,
         imageUrl: require("../../assets/office/tables/tables1.jpg"),
         checked: false,
@@ -520,7 +520,7 @@ const productState = {
       {
         id: 2,
         name: "Стіл геймерський HALSTED 60х120см чорний",
-        subCategoryName: "Комп'ютерні та письмові столи",
+        subCategoryName: "Письмові столи",
         price: 2250,
         imageUrl: require("../../assets/office/tables/tables2.jpg"),
         checked: false,
@@ -528,7 +528,7 @@ const productState = {
       {
         id: 3,
         name: "Стіл письмовий BILLUND 53х120 білий/дуб",
-        subCategoryName: "Комп'ютерні та письмові столи",
+        subCategoryName: "Письмові столи",
         price: 3000,
         imageUrl: require("../../assets/office/tables/tables3.jpg"),
         checked: false,
@@ -536,7 +536,7 @@ const productState = {
       {
         id: 4,
         name: "Стіл письмовий EVETOFTE дуб",
-        subCategoryName: "Комп'ютерні та письмові столи",
+        subCategoryName: "Письмові столи",
         price: 3750,
         imageUrl: require("../../assets/office/tables/tables4.jpg"),
         checked: false,
@@ -643,7 +643,7 @@ const productState = {
       {
         id: 1,
         name: "Кільця для фіранок з гачками 10 шт/упак.",
-        subCategoryName: "Аксесуари для штор",
+        subCategoryName: "Аксесуари",
         price: 150,
         imageUrl: require("../../assets/windows/accessories/accessories1.jpg"),
         checked: false,
@@ -651,7 +651,7 @@ const productState = {
       {
         id: 2,
         name: "Карниз подвійний BALL 120-210см",
-        subCategoryName: "Аксесуари для штор",
+        subCategoryName: "Аксесуари",
         price: 1650,
         imageUrl: require("../../assets/windows/accessories/accessories2.jpg"),
         checked: false,
@@ -659,7 +659,7 @@ const productState = {
       {
         id: 3,
         name: "Кліпси для фіранок чорний мат 10шт/упак.",
-        subCategoryName: "Аксесуари для штор",
+        subCategoryName: "Аксесуари",
         price: 135,
         imageUrl: require("../../assets/windows/accessories/accessories3.jpg"),
         checked: false,
@@ -667,7 +667,7 @@ const productState = {
       {
         id: 4,
         name: "Тримач д/фіранок HVASSER чорний",
-        subCategoryName: "Аксесуари для штор",
+        subCategoryName: "Аксесуари",
         price: 250,
         imageUrl: require("../../assets/windows/accessories/accessories4.jpg"),
         checked: false,

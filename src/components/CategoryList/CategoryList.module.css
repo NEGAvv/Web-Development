@@ -1,0 +1,32 @@
+.categoryList {
+    width: 20%; /* Ширина списку підкатегорій (ліворуч) */
+    padding: 20px;
+    padding-left: 30px;
+    box-sizing: border-box;
+  }
+  
+  .categoryList ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .categoryList li {
+    margin-bottom: 10px;
+    
+  }
+
+  .categoryLink {
+    text-decoration: none;
+    color: #333; 
+    font-size: 16px;
+    display: block;
+    padding: 8px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .categoryLink:hover {
+    background-color: #ddd; 
+  }
+  .categoryList li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
