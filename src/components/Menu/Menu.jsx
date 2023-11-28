@@ -9,31 +9,31 @@ const Menu = () => {
         <nav className={styles.menu}>
           <ul>
             <li>
-              <Link to="/category/bedroom">Спальня</Link>
+              <Link to="/bedroom">Спальня</Link>
             </li>
             <li>
-              <Link to="/category/bathroom">Ванна</Link>
+              <Link to="/bathroom">Ванна</Link>
             </li>
             <li>
-              <Link to="/category/office">Офіс</Link>
+              <Link to="/office">Офіс</Link>
             </li>
             <li>
-              <Link to="/category/livingroom">Вітальня</Link>
+              <Link to="/livingroom">Вітальня</Link>
             </li>
             <li>
-              <Link to="/category/diningRoom">Кухня та їдальня</Link>
+              <Link to="/diningRoom">Кухня та їдальня</Link>
             </li>
             <li>
-              <Link to="/category/storage">Зберігання</Link>
+              <Link to="/storage">Зберігання</Link>
             </li>
             <li>
-              <Link to="/category/windows">Для вікон</Link>
+              <Link to="/windows">Для вікон</Link>
             </li>
             <li>
-              <Link to="/category/garden">Для саду</Link>
+              <Link to="/garden">Для саду</Link>
             </li>
             <li>
-              <Link to="/category/forHome">Для дому</Link>
+              <Link to="/forHome">Для дому</Link>
             </li>
           </ul>
         </nav>

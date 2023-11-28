@@ -18,7 +18,6 @@ function App() {
     <div className="App">
       <div className="content">
         <HomePage />
-        {/* <Body /> */}
       </div>
     </div>
   );

@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    background-color: rgba(187, 178, 178, 0.4);
+    padding: 7px 5px;
+}
+.breadcrumb {
+    margin-bottom: 16px;
+    width: 76%;
+    margin: 0 auto;
+  }
+  
+  .breadcrumb nav {
+    display: inline-block;
+  }
+  
+  .breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .breadcrumb li {
+    margin-right: 8px;
+  }
+  
+  .breadcrumb span {
+    font-weight: bold;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+    color: #007bff; 
+  }
+  
+  

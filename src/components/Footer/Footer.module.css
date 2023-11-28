@@ -70,3 +70,14 @@
     line-height: 1.5;
     margin-bottom: 0;
   }
+
+  .footer_column a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  
+  .footer_column a:hover {
+    text-decoration: underline;
+    color: #7b7b7b; 
+  }

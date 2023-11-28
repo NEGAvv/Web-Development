@@ -25,10 +25,7 @@ const CategoryList = ({ categoryData }) => {
               if (firstItem.subCategoryName) {
                 return (
                   <li key={subCategory}>
-                    <Link
-                      to={`#${subCategory}`}
-                      className={styles.categoryLink}
-                    >
+                    <Link to={`${subCategory}`} className={styles.categoryLink}>
                       {firstItem.subCategoryName}
                     </Link>
                   </li>

@@ -24,6 +24,7 @@
   .categoryItem {
     display: inline-block;
     margin: 15px;
+    padding-top: 20px;
     text-align: left;
     position: relative;
     border-radius: 8px;

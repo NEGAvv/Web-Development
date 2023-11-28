@@ -11,7 +11,7 @@ const HomePage = () => {
       {Object.keys(products).map((category) => (
         <Link
           key={category}
-          to={`/category/${category}`}
+          to={`/${category}`}
           className={styles.categoryItem}
         >
           <h3 className={styles.categoryName}>

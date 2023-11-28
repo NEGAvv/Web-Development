@@ -1,11 +1,9 @@
 import React, { useContext, useState } from "react";
 import useReviews from "../../hooks/useReviews";
 import styles from "../ProductDetails/ProductDetails.module.css";
-import { useParams } from "react-router-dom";
-import { ProductContext } from "../../HOC/Providers/ProductProvider";
 import Dialog from "../Dialog/Dialog";
 
-function ProductDetails() {
+function ProductDetails({ product }) {
   const [comment, setComment] = useReviews(null, "lastComment");
   const [comments, setComments] = useState([]);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -16,29 +14,23 @@ function ProductDetails() {
 
   const handleCommentChange = (e) => {
     setComment(e.target.value);
-    // console.log(e.target.value)
   };
 
   const handleAddComment = () => {
     if (comment.trim() !== "") {
       setComments([...comments, comment]);
-      console.log(comment);
       setIsDialogOpen(true);
     }
   };
 
-  const { id } = useParams();
-  const value = useContext(ProductContext);
-  const currentProduct = value.products.filter(
-    (productValue) => productValue.id == id
-  )[0];
-
   return (
     <div className={styles.product_details}>
       <div className={styles.product_info}>
-        <h2>{currentProduct.name}</h2>
-        <img src={currentProduct.imageUrl} alt={currentProduct.name} />
-        <h3>Ціна: {currentProduct.price} грн</h3>
+        <h2>{product.name}</h2>
+        <div className={styles.image_container}>
+          <img src={product.imageUrl} alt={product.name} />
+        </div>
+        <h3>Ціна: {product.price} грн</h3>
       </div>
       <div className={styles.comment_section}>
         <h3>Додати коментар</h3>

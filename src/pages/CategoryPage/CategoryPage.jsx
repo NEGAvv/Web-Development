@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import styles from "./CategoryPage.module.css";
 import CategoryItem from "../../components/CategoryItem/CategoryItem";
 import CategoryList from "../../components/CategoryList/CategotyList";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 
 const CategoryPage = () => {
   const { products } = useContext(ProductContext);
@@ -17,22 +18,31 @@ const CategoryPage = () => {
   const categoryData = products[category];
 
   return (
-    <div className={styles.categoryContainer}>
-      <CategoryList categoryData={categoryData} />
-      <div className={styles.mainContent}>
-        <p className={styles.categoryTitle}>{categoryData.categoryTitle}</p>
-        <p className={styles.categoryDescription}>
-          {categoryData.categoryDescription}
-        </p>
-        {Object.keys(categoryData).map((subCategory) => (
-          <CategoryItem
-            key={subCategory}
-            subCategory={subCategory}
-            categoryData={categoryData}
-          />
-        ))}
+    <>
+      <Breadcrumb />
+      <div className={styles.categoryContainer}>
+        <CategoryList categoryData={categoryData} />
+        <div className={styles.mainContent}>
+          <p className={styles.categoryTitle}>{categoryData.categoryTitle}</p>
+          <p className={styles.categoryDescription}>
+            {categoryData.categoryDescription}
+          </p>
+          {Object.keys(categoryData).map((subCategory) => (
+            <Link
+              key={subCategory}
+              to={`/${category}/${subCategory}`}
+              className={styles.viewProductsLink}
+            >
+              <CategoryItem
+                key={subCategory}
+                subCategory={subCategory}
+                categoryData={categoryData}
+              />
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
