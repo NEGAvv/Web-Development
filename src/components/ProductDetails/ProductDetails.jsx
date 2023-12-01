@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import useReviews from "../../hooks/useReviews";
 import styles from "../ProductDetails/ProductDetails.module.css";
 import Dialog from "../Dialog/Dialog";
+import AddToCartButton from "../AddToCartButton/AddToCartButton";
 
 function ProductDetails({ product }) {
   const [comment, setComment] = useReviews(null, "lastComment");
@@ -33,13 +34,19 @@ function ProductDetails({ product }) {
         <h3>Ціна: {product.price} грн</h3>
       </div>
       <div className={styles.comment_section}>
+        <AddToCartButton product={product} />
         <h3>Додати коментар</h3>
-        <input
-          type="text"
-          onChange={handleCommentChange}
-          placeholder="Ваш коментар"
-        />
-        <button onClick={handleAddComment}>Додати</button>
+        <div className={styles.addComment}>
+          <input
+            type="text"
+            onChange={handleCommentChange}
+            placeholder="Ваш коментар"
+          />
+          <button className={styles.addCommentBtn} onClick={handleAddComment}>
+            Додати
+          </button>
+        </div>
+
         <div className={styles.comments}>
           <h3>Коментарі:</h3>
           <ul>

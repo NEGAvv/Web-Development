@@ -1,63 +1,92 @@
 import React, { useContext, useState } from "react";
-import { Modal, Form, Input, Button, Space } from "antd";
+import { Modal, Input, Button, Space } from "antd";
 import { AuthContext } from "../../HOC/Providers/AuthProvider";
 import styles from "./LoginModal.module.css";
 import Loader from "./Loader";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import MyFormikInput from "../MyFormikInput/MyFormikInput";
+import RegistrationModal from "../RegistrationModal/RegistrationModal";
+
+// Прибрати це
 
 const LoginModal = ({ isOpen, onClose }) => {
   const auth = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
+  const [registrationModalOpen, setRegistrationModalOpen] = useState(false);
 
   const handleLogin = async (values) => {
     setLoading(true);
 
-    // Симуляція асинхронного запиту аутентифікації
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
+    console.log("auth.auth:");
+    console.log(!auth.auth);
+
     auth.handleLogin(values.email, values.password);
-    onClose();
+    console.log("auth.auth:");
+    console.log(!auth.auth);
+
+    if (!auth.auth) {
+      // User not found, open registration modal
+      console.log("opened registration");
+      onClose();
+      setRegistrationModalOpen(true);
+    } else {
+      console.log("closed registration");
+      onClose();
+    }
     setLoading(false);
   };
 
   return (
-    <Modal title="Увійти" visible={isOpen} onCancel={onClose} footer={null}>
-      <Form onFinish={handleLogin}>
-        <Form.Item
-          label="E-mail"
-          name="email"
-          rules={[
-            {
-              required: true,
-              message: "Будь ласка, введіть ім'я користувача!",
-            },
-          ]}
+    <>
+      <Modal title="Увійти" visible={isOpen} onCancel={onClose} footer={null}>
+        <Formik
+          initialValues={{ email: "", password: "" }}
+          onSubmit={handleLogin}
         >
-          <Input />
-        </Form.Item>
+          <Form>
+            <div className={styles.formContainer}>
+              <MyFormikInput
+                label="E-mail"
+                name="email"
+                type="email"
+                placeholder="Введіть ваш e-mail"
+              />
+              <ErrorMessage name="email" component="div" />
 
-        <Form.Item
-          label="Пароль"
-          name="password"
-          rules={[{ required: true, message: "Будь ласка, введіть пароль!" }]}
-        >
-          <Input.Password />
-        </Form.Item>
+              <MyFormikInput
+                label="Пароль"
+                name="password"
+                type="password"
+                placeholder="Введіть ваш пароль"
+              />
+              <ErrorMessage name="password" component="div" />
 
-        <Form.Item className={styles.buttonContainer}>
-          <Space>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className={styles.button}
-              disabled={loading}
-            >
-              {loading ? <Loader /> : "Увійти"}
-            </Button>
-            <Button onClick={onClose}>Скасувати</Button>
-          </Space>
-        </Form.Item>
-      </Form>
-    </Modal>
+              <div className={styles.buttonContainer}>
+                <Space>
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    className={styles.button}
+                    disabled={loading}
+                  >
+                    {loading ? <Loader /> : "Увійти"}
+                  </Button>
+                  <Button onClick={onClose}>Скасувати</Button>
+                </Space>
+              </div>
+            </div>
+          </Form>
+        </Formik>
+      </Modal>
+      {registrationModalOpen && (
+        <RegistrationModal
+          isOpen={registrationModalOpen}
+          onClose={() => setRegistrationModalOpen(false)}
+        />
+      )}
+    </>
   );
 };
 

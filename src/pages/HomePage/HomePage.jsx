@@ -8,22 +8,28 @@ const HomePage = () => {
   return (
     <div className={styles.categoryContainer}>
       <h2 className={styles.categoryTitle}>Категорії товарів</h2>
-      {Object.keys(products).map((category) => (
-        <Link
-          key={category}
-          to={`/${category}`}
-          className={styles.categoryItem}
-        >
-          <h3 className={styles.categoryName}>
-            {products[category].categoryName}
-          </h3>
-          <img
-            className={styles.categoryImage}
-            src={products[category].imageUrl}
-            alt={category}
-          />
-        </Link>
-      ))}
+      {Object.keys(products).map((category) => {
+        if (category === "lastId" || category === "other") {
+          return null;
+        }
+
+        return (
+          <Link
+            key={category}
+            to={`/${category}`}
+            className={styles.categoryItem}
+          >
+            <h3 className={styles.categoryName}>
+              {products[category].categoryName}
+            </h3>
+            <img
+              className={styles.categoryImage}
+              src={products[category].imageUrl}
+              alt={category}
+            />
+          </Link>
+        );
+      })}
     </div>
   );
 };

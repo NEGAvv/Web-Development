@@ -1,51 +1,8 @@
 import React, { createContext, useState } from "react";
 export const ProductContext = createContext();
-
-const wardrobes = [
-  {
-    id: 1,
-    name: "Шафа HAGENDRUP 96x176см комбі білий",
-    subCategoryName: "Шафи",
-    price: 5500,
-    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes1.jpg"),
-    checked: false,
-  },
-  {
-    id: 2,
-    name: "Шафа HAGENDRUP 3дв 3шух дуб",
-    subCategoryName: "Шафи",
-    price: 7500,
-    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes2.jpg"),
-    checked: false,
-  },
-  {
-    id: 3,
-    name: "Шафа BILLUND 2дв 2шух білий/бетон",
-    subCategoryName: "Шафи",
-    price: 5500,
-    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes3.jpg"),
-    checked: false,
-  },
-  {
-    id: 4,
-    name: "Шафа JENSLEV 145x176см дуб",
-    subCategoryName: "Шафи",
-    price: 8500,
-    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes4.jpg"),
-    checked: false,
-  },
-  {
-    id: 5,
-    name: "Шафа VELLERUP 200х200см комбі дуб",
-    subCategoryName: "Шафи",
-    price: 13500,
-    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes5.jpg"),
-    checked: false,
-  },
-];
 const mirrors = [
   {
-    id: 1,
+    id: 13,
     name: "Дзеркало MARSTAL д.70см чорний",
     subCategoryName: "Дзеркала",
     price: 1500,
@@ -53,7 +10,7 @@ const mirrors = [
     checked: false,
   },
   {
-    id: 2,
+    id: 14,
     name: "Дзеркало BALSLEV 35x127см білий",
     subCategoryName: "Дзеркала",
     price: 1000,
@@ -61,7 +18,7 @@ const mirrors = [
     checked: false,
   },
   {
-    id: 3,
+    id: 15,
     name: "Дзеркало SPANG 40x70см чорний",
     subCategoryName: "Дзеркала",
     price: 1000,
@@ -69,7 +26,7 @@ const mirrors = [
     checked: false,
   },
   {
-    id: 4,
+    id: 16,
     name: "Дзеркало NORDBORG 72х162см золотистий",
     subCategoryName: "Дзеркала",
     price: 1750,
@@ -77,7 +34,7 @@ const mirrors = [
     checked: false,
   },
   {
-    id: 5,
+    id: 17,
     name: "Дзеркало STUDSTRUP 80x180см чорний",
     subCategoryName: "Дзеркала",
     price: 5000,
@@ -85,9 +42,52 @@ const mirrors = [
     checked: false,
   },
 ];
+const wardrobes = [
+  {
+    id: 18,
+    name: "Шафа HAGENDRUP 96x176см комбі білий",
+    subCategoryName: "Шафи",
+    price: 5500,
+    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes1.jpg"),
+    checked: false,
+  },
+  {
+    id: 19,
+    name: "Шафа HAGENDRUP 3дв 3шух дуб",
+    subCategoryName: "Шафи",
+    price: 7500,
+    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes2.jpg"),
+    checked: false,
+  },
+  {
+    id: 20,
+    name: "Шафа BILLUND 2дв 2шух білий/бетон",
+    subCategoryName: "Шафи",
+    price: 5500,
+    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes3.jpg"),
+    checked: false,
+  },
+  {
+    id: 21,
+    name: "Шафа JENSLEV 145x176см дуб",
+    subCategoryName: "Шафи",
+    price: 8500,
+    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes4.jpg"),
+    checked: false,
+  },
+  {
+    id: 22,
+    name: "Шафа VELLERUP 200х200см комбі дуб",
+    subCategoryName: "Шафи",
+    price: 13500,
+    imageUrl: require("../../assets/bedroom/wardrobes/wardrobes5.jpg"),
+    checked: false,
+  },
+];
+
 const shelves = [
   {
-    id: 1,
+    id: 47,
     name: "Стелаж VANDBORG 3пол дуб/чорний",
     subCategoryName: "Книжкові шафи",
     price: 1750,
@@ -95,7 +95,7 @@ const shelves = [
     checked: false,
   },
   {
-    id: 2,
+    id: 48,
     name: "Стелаж TRAPPEDAL 5пол дуб/білий",
     subCategoryName: "Книжкові шафи",
     price: 2350,
@@ -103,7 +103,7 @@ const shelves = [
     checked: false,
   },
   {
-    id: 3,
+    id: 49,
     name: "Шафка SKALS 2дв дуб",
     subCategoryName: "Книжкові шафи",
     price: 3000,
@@ -111,7 +111,7 @@ const shelves = [
     checked: false,
   },
   {
-    id: 4,
+    id: 50,
     name: "Шафка SKALS 2дв білий",
     subCategoryName: "Книжкові шафи",
     price: 2750,
@@ -121,7 +121,7 @@ const shelves = [
 ];
 const chairs = [
   {
-    id: 1,
+    id: 51,
     name: "Стілець обідній JONSTRUP сірий/дуб",
     subCategoryName: "Стільці",
     price: 1350,
@@ -129,7 +129,7 @@ const chairs = [
     checked: false,
   },
   {
-    id: 2,
+    id: 52,
     name: "Стілець обідній EJSTRUP синій/сталь",
     subCategoryName: "Стільці",
     price: 1650,
@@ -137,7 +137,7 @@ const chairs = [
     checked: false,
   },
   {
-    id: 3,
+    id: 53,
     name: "Стілець обідній TUREBY беж тканина",
     subCategoryName: "Стільці",
     price: 2000,
@@ -145,7 +145,7 @@ const chairs = [
     checked: false,
   },
   {
-    id: 4,
+    id: 54,
     name: "Стілець обідній KOKKEDAL сірий/дуб",
     subCategoryName: "Стільці",
     price: 1850,
@@ -153,7 +153,7 @@ const chairs = [
     checked: false,
   },
   {
-    id: 5,
+    id: 55,
     name: "Стілець обідній TOREBY шт.шкіра чорний",
     subCategoryName: "Стільці",
     price: 1000,
@@ -161,7 +161,7 @@ const chairs = [
     checked: false,
   },
   {
-    id: 6,
+    id: 56,
     name: "Стілець обідній GADSTRUP чорний дуб",
     subCategoryName: "Стільці",
     price: 1000,
@@ -169,7 +169,7 @@ const chairs = [
     checked: false,
   },
   {
-    id: 7,
+    id: 57,
     name: "Стілець обідній TYLSTRUP кавовий",
     subCategoryName: "Стільці",
     price: 1350,
@@ -177,7 +177,7 @@ const chairs = [
     checked: false,
   },
   {
-    id: 8,
+    id: 58,
     name: "Стілець обідній JEGIND натура/білий",
     subCategoryName: "Стільці",
     price: 2000,
@@ -187,7 +187,7 @@ const chairs = [
 ];
 const buffets = [
   {
-    id: 1,
+    id: 67,
     name: "Буфет JENSLEV 2дв 4шух дуб/білий",
     subCategoryName: "Буфети",
     price: 5000,
@@ -195,7 +195,7 @@ const buffets = [
     checked: false,
   },
   {
-    id: 2,
+    id: 68,
     name: "Буфет SKOVLUNDE 2дв 3шух натур. дуб/чорний",
     subCategoryName: "Буфети",
     price: 9000,
@@ -203,7 +203,7 @@ const buffets = [
     checked: false,
   },
   {
-    id: 3,
+    id: 69,
     name: "Буфет-сервант MARKSKEL білий/дуб",
     subCategoryName: "Буфети",
     price: 21998,
@@ -211,7 +211,7 @@ const buffets = [
     checked: false,
   },
   {
-    id: 4,
+    id: 70,
     name: "Буфет MANDERUP 3дв 3шух дикий дуб",
     subCategoryName: "Буфети",
     price: 11999,
@@ -220,6 +220,7 @@ const buffets = [
   },
 ];
 const productState = {
+  lastId: 112,
   bedroom: {
     categoryName: "Спальня",
     categoryTitle:
@@ -247,7 +248,7 @@ const productState = {
     ],
     beds: [
       {
-        id: 1,
+        id: 3,
         name: "Ліжко KILDEN 90x200см темно-сірий",
         subCategoryName: "Ліжка",
         price: 4500,
@@ -255,7 +256,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 4,
         name: "Ліжко SALLINGE 140x200см натура",
         subCategoryName: "Ліжка",
         price: 5250,
@@ -263,7 +264,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 5,
         name: "Ліжко VEDDE 140x200см дикий дуб",
         subCategoryName: "Ліжка",
         price: 6250,
@@ -271,15 +272,15 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
-        name: "ЛЛіжко KONGSBERG 140x200см сірий",
+        id: 6,
+        name: "Ліжко KONGSBERG 140x200см сірий",
         subCategoryName: "Ліжка",
         price: 8000,
         imageUrl: require("../../assets/bedroom/beds/beds4.jpg"),
         checked: false,
       },
       {
-        id: 5,
+        id: 7,
         name: "Ліжко HASLEV 140x200см т.сірий",
         subCategoryName: "Ліжка",
         price: 11500,
@@ -289,7 +290,7 @@ const productState = {
     ],
     pillows: [
       {
-        id: 1,
+        id: 8,
         name: "Подушка BEITO 50x70см 850г",
         subCategoryName: "Подушки",
         price: 1100,
@@ -297,7 +298,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 9,
         name: "Подушка ROMEDAL 50x70см 900г",
         subCategoryName: "Подушки",
         price: 375,
@@ -305,7 +306,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 10,
         name: "Подушка ROMEDAL висока 50x70см 1100г",
         subCategoryName: "Подушки",
         price: 550,
@@ -313,7 +314,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 11,
         name: "Подушка STEINKOLLEN 50х70см 1050г",
         subCategoryName: "Подушки",
         price: 400,
@@ -321,7 +322,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 5,
+        id: 12,
         name: "Подушка FALKETIND 750г 50x70см",
         subCategoryName: "Подушки",
         price: 850,
@@ -341,7 +342,7 @@ const productState = {
     imageUrl: require("../../assets/bathroom/bathroom.jpg"),
     accessories: [
       {
-        id: 1,
+        id: 23,
         name: "Склянка для щіток ESSVIK перероблене скло",
         subCategoryName: "Аксесуари",
         price: 115,
@@ -349,7 +350,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 24,
         name: "Відро VEGBY 5 л морські водорості",
         subCategoryName: "Аксесуари",
         price: 700,
@@ -357,7 +358,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 25,
         name: "Полиця NACKA з гачками чорний",
         subCategoryName: "Аксесуари",
         price: 800,
@@ -365,7 +366,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 26,
         name: "Диспенсер для мила ROSENLUND асорт.",
         subCategoryName: "Аксесуари",
         price: 90,
@@ -375,7 +376,7 @@ const productState = {
     ],
     towels: [
       {
-        id: 1,
+        id: 27,
         name: "Рушник FLISBY 40x60см білий",
         subCategoryName: "Рушники",
         price: 35,
@@ -383,7 +384,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 28,
         name: "Рушник TORSBY 50x90см сірий",
         subCategoryName: "Рушники",
         price: 100,
@@ -391,7 +392,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 29,
         name: "Рушник YSBY 50x90см рожевий",
         subCategoryName: "Рушники",
         price: 135,
@@ -399,7 +400,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 30,
         name: "Рушник MALUNG 50x100см беж",
         subCategoryName: "Рушники",
         price: 160,
@@ -410,7 +411,7 @@ const productState = {
     mirrors: [...mirrors],
     bathrobes: [
       {
-        id: 1,
+        id: 31,
         name: "Халат NITTA S/M мікрофібра білий",
         subCategoryName: "Халати та капці",
         price: 550,
@@ -418,7 +419,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 32,
         name: "Халат VALBO L/XL т.синій",
         subCategoryName: "Халати та капці",
         price: 500,
@@ -426,7 +427,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 33,
         name: "Капці BROKIND р.36-46 в асортименті",
         subCategoryName: "Халати та капці",
         price: 450,
@@ -434,7 +435,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 34,
         name: "Сандалі LAXVIK 35-42 асорт.",
         subCategoryName: "Халати та капці",
         price: 475,
@@ -453,7 +454,7 @@ const productState = {
     imageUrl: require("../../assets/office/office.jpg"),
     accessories: [
       {
-        id: 1,
+        id: 35,
         name: "Підставка для ноутбука THEM бамбук",
         subCategoryName: "Аксесуари",
         price: 1000,
@@ -461,7 +462,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 36,
         name: "Підставка для ноутбука MEJLBY регульована чорний",
         subCategoryName: "Аксесуари",
         price: 750,
@@ -469,7 +470,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 37,
         name: "Підставка для ноутбука NEJRUP асорт.",
         subCategoryName: "Аксесуари",
         price: 450,
@@ -477,7 +478,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 38,
         name: "Підставка для монітора SULDRUP чорний",
         subCategoryName: "Аксесуари",
         price: 700,
@@ -487,7 +488,7 @@ const productState = {
     ],
     officeChairs: [
       {
-        id: 1,
+        id: 39,
         name: "Крісло офісне BILLUM чорний",
         subCategoryName: "Крісла офісні",
         price: 2650,
@@ -495,7 +496,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 40,
         name: "Крісло офісне SKODSBORG сірий",
         subCategoryName: "Крісла офісні",
         price: 4000,
@@ -503,7 +504,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 41,
         name: "Крісло офісне KASTBJERG шт.шкіра чорний",
         subCategoryName: "Крісла офісні",
         price: 5500,
@@ -511,7 +512,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 42,
         name: "Крісло офісне ABILDHOLT т.сірий/хром",
         subCategoryName: "Крісла офісні",
         price: 2650,
@@ -521,7 +522,7 @@ const productState = {
     ],
     tables: [
       {
-        id: 1,
+        id: 43,
         name: "Стіл письмовий VANDBORG 60х120 дуб/чорн.",
         subCategoryName: "Письмові столи",
         price: 1500,
@@ -529,7 +530,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 44,
         name: "Стіл геймерський HALSTED 60х120см чорний",
         subCategoryName: "Письмові столи",
         price: 2250,
@@ -537,7 +538,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 45,
         name: "Стіл письмовий BILLUND 53х120 білий/дуб",
         subCategoryName: "Письмові столи",
         price: 3000,
@@ -545,7 +546,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 46,
         name: "Стіл письмовий EVETOFTE дуб",
         subCategoryName: "Письмові столи",
         price: 3750,
@@ -567,7 +568,7 @@ const productState = {
     chairs: [...chairs],
     tables: [
       {
-        id: 1,
+        id: 59,
         name: "Столик RANDERUP д.47 см чорний",
         subCategoryName: "Столики",
         price: 550,
@@ -575,7 +576,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 60,
         name: "Столик NYBO д.55см дуб/чорний",
         subCategoryName: "Столики",
         price: 1299,
@@ -583,7 +584,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 61,
         name: "Столик OSTED 45x45см 1пол бамбук",
         subCategoryName: "Столики",
         price: 1850,
@@ -591,7 +592,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 62,
         name: "Стіл кавовий DOKKEDAL 75х115 см бетон",
         subCategoryName: "Столики",
         price: 4499,
@@ -601,7 +602,7 @@ const productState = {
     ],
     sofas: [
       {
-        id: 1,
+        id: 63,
         name: "Софа GISTRUP 2-місна т.синій",
         subCategoryName: "Софи",
         price: 10000,
@@ -609,7 +610,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 64,
         name: "Софа DAMHALE 3-місна чорний",
         subCategoryName: "Софи",
         price: 13500,
@@ -617,7 +618,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 65,
         name: "Софа GEDVED 2-місна сірий",
         subCategoryName: "Софи",
         price: 11500,
@@ -625,7 +626,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 66,
         name: "Софа кутова SVALBARD т.сірий",
         subCategoryName: "Софи",
         price: 18500,
@@ -667,7 +668,7 @@ const productState = {
     imageUrl: require("../../assets/windows/windows.jpg"),
     accessories: [
       {
-        id: 1,
+        id: 71,
         name: "Кільця для фіранок з гачками 10 шт/упак.",
         subCategoryName: "Аксесуари",
         price: 150,
@@ -675,7 +676,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 72,
         name: "Карниз подвійний BALL 120-210см",
         subCategoryName: "Аксесуари",
         price: 1650,
@@ -683,7 +684,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 73,
         name: "Кліпси для фіранок чорний мат 10шт/упак.",
         subCategoryName: "Аксесуари",
         price: 135,
@@ -691,7 +692,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 74,
         name: "Тримач д/фіранок HVASSER чорний",
         subCategoryName: "Аксесуари",
         price: 250,
@@ -701,7 +702,7 @@ const productState = {
     ],
     curtains: [
       {
-        id: 1,
+        id: 75,
         name: "Фіранка ISTEREN 1x140x300 св.сірий",
         subCategoryName: "Штори",
         price: 550,
@@ -709,7 +710,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 76,
         name: "Фіранка AUSTRA 1x140x300 оксамит бежевий",
         subCategoryName: "Штори",
         price: 1499,
@@ -717,7 +718,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 77,
         name: "Фіранка RUSKEN 1х140x300 меланж світло-сірий",
         subCategoryName: "Штори",
         price: 999,
@@ -725,7 +726,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 78,
         name: "Фіранка ANTEN 1х140x300 шт.замш оливк.",
         subCategoryName: "Штори",
         price: 1499,
@@ -735,7 +736,7 @@ const productState = {
     ],
     rollerBlinds: [
       {
-        id: 1,
+        id: 79,
         name: "Ролета блекаут BOLGA 100x170см с.сірий",
         subCategoryName: "Ролети",
         price: 1299,
@@ -743,7 +744,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 80,
         name: "Ролета SENJA 45x170см пісочний",
         subCategoryName: "Ролети",
         price: 499,
@@ -751,7 +752,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 81,
         name: "Ролета день-ніч FEMRIS 45x180см тауп",
         subCategoryName: "Ролети",
         price: 699,
@@ -759,7 +760,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 82,
         name: "Ролета день-ніч FEMRIS 45x180см сірий",
         subCategoryName: "Ролети",
         price: 699,
@@ -778,7 +779,7 @@ const productState = {
     imageUrl: require("../../assets/garden/garden.jpg"),
     loungeNetworks: [
       {
-        id: 1,
+        id: 83,
         name: "Комплект меблів для відпочинку VASTO 4м білий",
         subCategoryName: "Лаунж сети",
         price: 26500,
@@ -786,7 +787,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 84,
         name: "Комплект меблів для відпочинку BEJSTRUP 4м сірий",
         subCategoryName: "Лаунж сети",
         price: 39999,
@@ -794,7 +795,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 85,
         name: "Комплект меблів для відпочинку модульний EG 6м чорний",
         subCategoryName: "Лаунж сети",
         price: 32500,
@@ -802,7 +803,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 86,
         name: "Комплект меблів для відпочинку ULLEHUSE з ємністю 9м чорний",
         subCategoryName: "Лаунж сети",
         price: 59999,
@@ -812,7 +813,7 @@ const productState = {
     ],
     chairs: [
       {
-        id: 1,
+        id: 87,
         name: "Стілець багатопозиційний KAMSTRUP хард.",
         subCategoryName: "Стільці для відпочинку",
         price: 3500,
@@ -820,7 +821,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 88,
         name: "Стілець садовий GRENAA чорний/сірий",
         subCategoryName: "Стільці для відпочинку",
         price: 900,
@@ -828,7 +829,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 89,
         name: "Стілець садовий ILDERHUSE чорний",
         subCategoryName: "Стільці для відпочинку",
         price: 3999,
@@ -836,7 +837,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 90,
         name: "Стілець BREDSTEN 6-позиційний чорний",
         subCategoryName: "Стільці для відпочинку",
         price: 4699,
@@ -846,7 +847,7 @@ const productState = {
     ],
     tables: [
       {
-        id: 1,
+        id: 91,
         name: "Стіл садовий JERSORE 80х140см чорний",
         subCategoryName: "Садові столи",
         price: 5000,
@@ -854,7 +855,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 92,
         name: "Стіл RANGSTRUP д.130см натуральний/чорний",
         subCategoryName: "Садові столи",
         price: 10000,
@@ -862,7 +863,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 93,
         name: "Стіл садовий GAMMELBY 100х225см сірий",
         subCategoryName: "Садові столи",
         price: 29999,
@@ -870,7 +871,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 94,
         name: "Стіл садовий HOLTE діам.120см хардвуд",
         subCategoryName: "Садові столи",
         price: 13500,
@@ -880,7 +881,7 @@ const productState = {
     ],
     storage: [
       {
-        id: 1,
+        id: 95,
         name: "Короб TAMBOHUSE 150х77х91см сірий",
         subCategoryName: "Вуличне зберігання",
         price: 16500,
@@ -888,7 +889,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 96,
         name: "Короб для подушок TAMBOHUSE 150х77х91см натуральний",
         subCategoryName: "Вуличне зберігання",
         price: 16500,
@@ -896,7 +897,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 97,
         name: "Короб KRAMNITSE 132х72х114см сірий",
         subCategoryName: "Вуличне зберігання",
         price: 9999,
@@ -904,7 +905,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 98,
         name: "Короб для подушок BERGEN 197x76x71см чорний",
         subCategoryName: "Вуличне зберігання",
         price: 10000,
@@ -924,7 +925,7 @@ const productState = {
     mirrors: [...mirrors],
     childrenFurniture: [
       {
-        id: 1,
+        id: 99,
         name: "Крісло-мішок SNEKKERSTEN 60х90х60см",
         subCategoryName: "Дитячі меблі",
         price: 1350,
@@ -932,7 +933,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 100,
         name: "Намет ігровий SMINGE 120х148см зірки",
         subCategoryName: "Дитячі меблі",
         price: 1399,
@@ -940,7 +941,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 101,
         name: "Захисний бар'єр для дітей SALENE білий",
         subCategoryName: "Дитячі меблі",
         price: 2500,
@@ -948,7 +949,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 102,
         name: "Крісло-ліжко VEGGER сірий",
         subCategoryName: "Дитячі меблі",
         price: 5500,
@@ -958,7 +959,7 @@ const productState = {
     ],
     blankets: [
       {
-        id: 1,
+        id: 103,
         name: "Плед KASTANJ 130x170см фліс білий/сірий",
         subCategoryName: "Пледи",
         price: 200,
@@ -966,7 +967,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 104,
         name: "Плед BONDEROSE 130x170см латте",
         subCategoryName: "Пледи",
         price: 425,
@@ -974,7 +975,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 105,
         name: "Плед стьобаний SKOVSTJERNE 140x200см білий/синій",
         subCategoryName: "Пледи",
         price: 500,
@@ -982,7 +983,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 106,
         name: "Плед LUNDKARSE 130x170см вовна сірий/беж",
         subCategoryName: "Пледи",
         price: 1500,
@@ -992,7 +993,7 @@ const productState = {
     ],
     pillows: [
       {
-        id: 1,
+        id: 107,
         name: "Подушка ASPARGES 40x40см асорт.",
         subCategoryName: "Декоративні подушки",
         price: 100,
@@ -1000,7 +1001,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 2,
+        id: 108,
         name: "Подушка FRESIA 35x50см зелений/синій",
         subCategoryName: "Декоративні подушки",
         price: 225,
@@ -1008,7 +1009,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 3,
+        id: 109,
         name: "Подушка HORNFIOL шеніль 45x45см синій",
         subCategoryName: "Декоративні подушки",
         price: 425,
@@ -1016,7 +1017,7 @@ const productState = {
         checked: false,
       },
       {
-        id: 4,
+        id: 110,
         name: "Подушка LILJE 35х50см велюр сірий",
         subCategoryName: "Декоративні подушки",
         price: 325,
@@ -1026,6 +1027,15 @@ const productState = {
     ],
     //add more sub categories
   },
+
+  other: [
+    {
+      id: 111,
+      name: "Подушка ASPARGES 40x40см асорт.",
+      subCategoryName: "Декоративні подушки",
+      price: 100,
+    },
+  ],
 };
 
 export default function ProductProvider({ children }) {
