@@ -4,7 +4,7 @@ import { AuthContext } from "../../HOC/Providers/AuthProvider";
 import MyFormikInput from "../MyFormikInput/MyFormikInput";
 import styles from "./RegistrationModal.module.css";
 import { Formik, Form, ErrorMessage } from "formik";
-import Loader from "../LoginModal/Loader";
+import Loader from "./Loader";
 
 const RegistrationModal = ({ isOpen, onClose }) => {
   const auth = useContext(AuthContext);

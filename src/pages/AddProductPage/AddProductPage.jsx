@@ -65,7 +65,6 @@ const AddProductPage = () => {
               name="name"
               placeholder="Введіть назву"
             />
-
             <MyFormikInput
               label="Ціна"
               type="number"

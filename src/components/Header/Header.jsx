@@ -5,7 +5,6 @@ import JyskLogo from "../../Jysk_logo.svg";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../HOC/Providers/AuthProvider";
 import { Button } from "antd";
-import LoginModal from "../LoginModal/LoginModal";
 import { LoginOutlined, LogoutOutlined } from "@ant-design/icons";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import CartModal from "../CartModal/CartModal";

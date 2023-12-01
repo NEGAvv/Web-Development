@@ -101,7 +101,6 @@ export default function EditProductPage() {
         >
           <Form>
             <div className={styles.form_container}>
-              {/* <label htmlFor="id">ID</label> */}
               <Field type="hidden" id="id" name="id" />
 
               <MyFormikInput
