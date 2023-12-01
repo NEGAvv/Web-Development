@@ -12,7 +12,7 @@
 /build
 
 # api-keys
-/config
+src/config/api-keys.js
 
 # misc
 .DS_Store
