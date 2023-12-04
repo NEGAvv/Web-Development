@@ -6,7 +6,7 @@ import ProductProvider, {
 } from "./HOC/Providers/ProductProvider";
 import HomePage from "./pages/HomePage/HomePage";
 
-const admin = { email: "admin@admin.com", password: "admin" };
+const admin = { email: "admin@admin.com", password: "Admin1" };
 
 function App() {
   const value = useContext(ProductContext);

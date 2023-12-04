@@ -5,6 +5,8 @@ import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import MyFormikInput from "../../components/MyFormikInput/MyFormikInput";
 import styles from "./AddProductPage.module.css";
+import * as Yup from "yup";
+
 const AddProductPage = () => {
   const { products, setProducts } = useContext(ProductContext);
   const navigate = useNavigate();
@@ -27,23 +29,11 @@ const AddProductPage = () => {
     navigate("/products");
   };
 
-  const validateForm = (values) => {
-    const errors = {};
-
-    if (!values.name) {
-      errors.name = "Вкажіть будь ласка назву";
-    }
-
-    if (!values.price) {
-      errors.price = "Вкажіть будь ласка ціну";
-    }
-
-    if (!values.subCategoryName) {
-      errors.subCategoryName = "Вкажіть будь ласка підкатегорію";
-    }
-
-    return errors;
-  };
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required("Вкажіть будь ласка назву"),
+    price: Yup.number().required("Вкажіть будь ласка ціну"),
+    subCategoryName: Yup.string().required("Вкажіть будь ласка підкатегорію"),
+  });
 
   return (
     <div className="container">
@@ -54,7 +44,7 @@ const AddProductPage = () => {
           price: "",
           subCategoryName: "",
         }}
-        validate={validateForm}
+        validationSchema={validationSchema}
         onSubmit={handleSave}
       >
         <Form>

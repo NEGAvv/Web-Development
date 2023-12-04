@@ -5,6 +5,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useParams, useNavigate } from "react-router-dom";
 import MyFormikInput from "../../components/MyFormikInput/MyFormikInput";
 import styles from "./EditProductPage.module.css";
+import * as Yup from "yup";
+
 export default function EditProductPage() {
   const { products, setProducts } = useContext(ProductContext);
   const { id } = useParams();
@@ -72,19 +74,11 @@ export default function EditProductPage() {
     navigate("/products");
   };
 
-  const validateForm = (values) => {
-    const errors = {};
-
-    if (!values.name) {
-      errors.name = "Вкажіть будь ласка назву";
-    }
-
-    if (!values.price) {
-      errors.price = "Вкажіть будь ласка ціну";
-    }
-
-    return errors;
-  };
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required("Вкажіть будь ласка назву"),
+    price: Yup.number().required("Вкажіть будь ласка ціну"),
+    subCategoryName: Yup.string().required("Вкажіть будь ласка підкатегорію"),
+  });
 
   return (
     <div className="container">
@@ -96,7 +90,7 @@ export default function EditProductPage() {
             name: product.name,
             price: product.price,
           }}
-          validate={validateForm}
+          validationSchema={validationSchema}
           onSubmit={handleSave}
         >
           <Form>
