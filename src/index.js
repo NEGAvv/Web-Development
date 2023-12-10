@@ -7,16 +7,20 @@ import ProductProvider from "./HOC/Providers/ProductProvider";
 import Router from "./Router";
 import { BrowserRouter } from "react-router-dom";
 import AuthProvider from "./HOC/Providers/AuthProvider";
+import { Provider } from "react-redux";
+import store from "./store/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthProvider>
-    <BrowserRouter>
-      <ProductProvider>
+  <Provider store={store}>
+    <AuthProvider>
+      <BrowserRouter>
+        {/* <ProductProvider> */}
         <Router />
-      </ProductProvider>
-    </BrowserRouter>
-  </AuthProvider>
+        {/* </ProductProvider> */}
+      </BrowserRouter>
+    </AuthProvider>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

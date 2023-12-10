@@ -11,8 +11,6 @@ import ProductProvider, {
 } from "./HOC/Providers/ProductProvider";
 
 function App() {
-  const value = useContext(ProductContext);
-
   return (
     <div className="App">
       <div className="content">

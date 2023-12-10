@@ -4,6 +4,7 @@ import styles from "../ProductDetails/ProductDetails.module.css";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../../HOC/Providers/ProductProvider";
 import Dialog from "../Dialog/Dialog";
+import { useSelector } from "react-redux";
 
 function ProductDetails() {
   const [comment, setComment] = useReviews(null, "lastComment");
@@ -28,8 +29,11 @@ function ProductDetails() {
   };
 
   const { id } = useParams();
-  const value = useContext(ProductContext);
-  const currentProduct = value.products.filter(
+  // const value = useContext(ProductContext);
+
+  const productState = useSelector((state) => state.products);
+
+  const currentProduct = productState.filter(
     (productValue) => productValue.id == id
   )[0];
 
